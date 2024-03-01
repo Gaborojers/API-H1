@@ -11,7 +11,7 @@ export class NotificationPaymentUseCase {
   async run(
     idPay: number,
     product: string,
-    date: Date,
+    date: string,
     price: number
   ): Promise<Payments | null> {
     const pay = new Payments(idPay, product, date, price);

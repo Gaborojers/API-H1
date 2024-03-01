@@ -2,7 +2,7 @@ export class Payments {
     constructor(
       readonly idPay: number,
       readonly product: string,
-      readonly date: Date,
+      readonly date: string,
       readonly price: number
     ) {}
   }
