@@ -2,7 +2,6 @@ import { NotificationPaymentUseCase } from "../application/NotificationPaymentsU
 import { PaymentsRepository } from "../domain/PaymentsRepository";
 import { ResponseRepository } from "./ResponseRepository";
 import { NotificationController } from "./controller/NotificationPaymentsController";
-import { Server } from "socket.io";
 import { NotificationService } from "./NotificationService/NotificationService";
 
 const responseQueue = new ResponseRepository(); 

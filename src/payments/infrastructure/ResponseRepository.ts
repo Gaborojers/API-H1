@@ -12,9 +12,8 @@ export class ResponseRepository implements PaymentsRepository {
    try {
     const conn = await amqp.connect(url, options);
     const ch = await conn.createChannel();
-    const status = ch.publish(
-      "upchiapas.int",
-      "esp32",
+    const status = ch.sendToQueue(
+      "payment",
       Buffer.from(JSON.stringify(pay))
     );
 
