@@ -20,7 +20,7 @@ const options = {
 
 const logger = new Signale(options);
 
-const port = process.env.PORT ?? 3001;
+const port: string | undefined = process.env.PORT;
 
 app.listen(port, () => {
   logger.success(`Server listening on port ${port}`);
